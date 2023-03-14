@@ -1,8 +1,8 @@
 {
-  "vendor": "fabricasunidas",
-  "name": "metatags",
-  "version": "1.0.0",
-  "title": "MetaTags",
+  "vendor": "panamericana",
+  "name": "info-card-custom",
+  "version": "0.0.1",
+  "title": "List Context - Info Card Custom",
   "description": "CHANGE_ME",
   "builders": {
     "react": "3.x",
@@ -11,7 +11,8 @@
     "store": "0.x"
   },
   "dependencies": {
-    "vtex.styleguide": "9.x"
+    "vtex.list-context": "0.x",
+    "vtex.css-handles": "0.x"
   },
   "registries": [
     "smartcheckout"

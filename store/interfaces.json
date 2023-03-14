@@ -1,5 +1,7 @@
 {
-  "meta-tag": {
-    "component": "MetaTags"
+  "list-context.info-card-custom": {
+    "component": "InfoCardCustom",
+    "composition": "children",
+    "allowed": "*"
   }
 }
