@@ -22,9 +22,7 @@ const ValidacionInfoCards = (infoCards: InfoCard[], titleAtTop: boolean = true) 
       if (ahora.getTime() > inputFechaInicio.getTime() && ahora.getTime() < inputFechaFinal.getTime()) {
         if(card.urlRedireccion === '' || !card.urlRedireccion) {
           return (
-            <a
-              href={card.urlRedireccion}
-              target={card.abrirNuevaVentana ? '_blank' : '_self'}
+            <div
               key={index}
               className={`${handles['info-card__general-container']}`}
               style={titleAtTop ? {display: 'flex', width: "100%",flexDirection: 'column'} : {display: 'flex', width: "100%", flexDirection: 'column-reverse'}}
@@ -41,12 +39,14 @@ const ValidacionInfoCards = (infoCards: InfoCard[], titleAtTop: boolean = true) 
                 className={`${handles['info-card__image']}`}
                 style={{width: "100%"}}
               />
-            </a>
+            </div>
           )
         }
 
         return (
-          <div
+          <a
+            href={card.urlRedireccion}
+            target={card.abrirNuevaVentana ? '_blank' : '_self'}
             key={index}
             className={`${handles['info-card__general-container']}`}
             style={titleAtTop ? {display: 'flex', width: "100%",flexDirection: 'column'} : {display: 'flex', width: "100%", flexDirection: 'column-reverse'}}
@@ -63,7 +63,7 @@ const ValidacionInfoCards = (infoCards: InfoCard[], titleAtTop: boolean = true) 
               className={`${handles['info-card__image']}`}
               style={{width: "100%"}}
             />
-          </div>
+          </a>
         )
       }
       return null;
